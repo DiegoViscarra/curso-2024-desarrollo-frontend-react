@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useSelector } from 'react-redux';
 import SearchBar from "./_components/SearchBar";
 import ProductTable from "./_components/ProductTable";
 
-const FilterableProductTable = ({ products }) => {
+const FilterableProductTable = () => {
     const [filterText, setFilterText] = useState('');
     const [inStockOnly, setInStockOnly] = useState(false);
+    const filterableProductTableState = useSelector((state) => state.filterableProductTable);
 
     return (
         <div>
@@ -14,7 +16,7 @@ const FilterableProductTable = ({ products }) => {
                 onFilterTextChange={setFilterText} 
                 onInStockOnlyChange={setInStockOnly} />
             <ProductTable 
-                products={products} 
+                products={filterableProductTableState.products} 
                 filterText={filterText}
                 inStockOnly={inStockOnly} />
         </div>
