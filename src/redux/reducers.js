@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 
-import defaultReducer from './default/defaultReducers';
-import filterableProductTableReducer from './filterableProductTable/filterableProductTableReducer';
+import defaultReducer from "./default/defaultReducer";
+import productReducer from "./product/productReducer";
+import formReducer from "./form/formReducer";
 
 const rootReducer = combineReducers({
     default: defaultReducer,
-    filterableProductTable: filterableProductTableReducer,
-})
+    product: productReducer,
+    form: formReducer,
+});
 
 export default rootReducer;

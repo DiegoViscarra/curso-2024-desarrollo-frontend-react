@@ -1,4 +1,4 @@
-import { SET_PRODUCTS } from "./filterableProductTableTypes";
+import { SET_PRODUCTS } from "./productTypes";
 
 export const setProducts = (products) => {
     return {
