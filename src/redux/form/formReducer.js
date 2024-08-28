@@ -1,10 +1,12 @@
-import { SET_FORM_DATA } from './formTypes';
+import { SET_FORM_DATA, CLEAR_FORM_DATA  } from './formTypes';
 
 const initialState = {
     formData: {
         username: '',
         email: '',
+        password: '',
     },
+    correctPassword: "mod7ReactUSIP",
 };
 
 const formReducer = (state = initialState, action) => {
@@ -15,6 +17,16 @@ const formReducer = (state = initialState, action) => {
                 formData: {
                     ...state.formData,
                     ...action.payload,
+                }
+            }
+        }
+        case CLEAR_FORM_DATA: {
+            return {
+                ...state,
+                formData: {
+                    username: '',
+                    email: '',
+                    password: '',
                 }
             }
         }

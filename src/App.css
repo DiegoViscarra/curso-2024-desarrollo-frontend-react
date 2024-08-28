@@ -158,3 +158,54 @@ form div input {
   cursor: pointer;
 }
 /* styles for modals */
+
+.list-username {
+  color: white;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.button-toggle-password-visibility {
+  width: 50px;
+}
+
+.a-logout {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 20px;
+}
+
+.modal-with-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container-landing-page {
+  margin: 1% 5%;
+}
+
+.h1-landing-page {
+  margin-bottom: 0;
+}
+
+hr.solid {
+  border-top: 3px solid #64AA5A;
+}
+
+hr.rounded {
+  margin-top: 80px;
+}
+
+header {
+  background-color: #64AA5A;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
